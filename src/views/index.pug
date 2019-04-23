@@ -5,9 +5,13 @@ html(lang="ru")
   body.body
     .wrapper
       include blocks/header
+      include blocks/navigation
       main.main
         include blocks/home
+        include blocks/projects
+        include blocks/publications
       include blocks/footer
+      include blocks/popup
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="js/libs.min.js")                  
     script(src="js/common.min.js")

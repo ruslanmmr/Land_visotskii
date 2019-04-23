@@ -1,7 +1,50 @@
-.projects
-  .container
+section.projects(id="projects")
+  .container.container_style2
     .projects__container.row
-      .project-block.col
+      .projects__background.lazy(data-src='img/backgrounds/bg-projects.jpg')
+      .project-block.project-block_title.col
         .project-block__container
-          h4.project-block__title 
+          .project-block__wrap
+            h4.title Проекты и бизнесы
+            .project-block__content
+              .project-block__text
+                p Под управлением компаний трудится свыше 500 человек.
+                p Проектируем и озеленяем участки.  Строим, ведем коммуникации. Ухаживаем за растениями.
+      .project-block.col
+        .project-block__container.shadow
+          .project-block__wrap
+            h4.project-block__title ЛИ-ЭР
+            .project-block__content
+              .project-block__text 
+                p Выполняем цикл работ от проектирования садов до ухода за участком.
+                p Студия классического ландшафтного дизайна. Основана в 1995 году. Свыше 20 наград и двух сотен реализованных проектов.
+              .play-button.play-button_style2.project-block__play-button
+                a(href="#")
+                  i.fas.fa-caret-right
+                span.play-button__label Узнать за 90 сек.
+          a(href="li-er.com" target='_blank').project-block__link li-er.com
+      .project-block.col
+        .project-block__container.shadow
+          .project-block__wrap
+            h4.project-block__title Ландшафт Бистро
+            .project-block__content
+              .project-block__text 
+                p Студия готовых ландшафтных решений. Создадим на участке сад с коммуникациями за 2 суток. Оперативно украсим городскую площадку к празднику.
+                p Компания основана в 2012 году. В каталоге свыше 60 композиций, разработанных Ильей Васецким. Услуга «Шведский стол»: доставка понравившихся растенийна участок и формирование сада за 2 суток при вас.
+          a(href="landshaftbistro.ru" target='_blank').project-block__link landshaftbistro.ru
+      .project-block.project-block_type2.col
+        .project-block__container
+          .project-block__wrap
+            h4.project-block__title Университет<br> Ландшафтного<br> Дизайна
+            .project-block__content
+              .project-block__text 
+                p Обучим новичков и профи, как реализоваться, достичь успехов в нише и продолжить самостоятельно расти. Онлайн и офлайн формат.
+          span.project-block__link Скоро
+      .project-block.project-block_type2.col
+        .project-block__container
+          .project-block__wrap
+            img(data-src="img/backgrounds/blur.jpg", alt="").project-block__blur.lazy
+            h4.project-block__title.project-block__title_type2 Проект в разработке
+
+
 

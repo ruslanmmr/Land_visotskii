@@ -1,24 +1,25 @@
-.home
+section.home(id="home")
   .container
     .home__container
       .home__background.lazy(data-src='img/backgrounds/bg-home.jpg')
       .home__section.home__section_1
-        h2.home__title Илья Васецкий - эксперт<br> с 25-летним опытом<br> в ландшафтной индустрии
+        h2.title.home__title Илья Васецкий - эксперт<br> с 25-летним опытом<br> в ландшафтной индустрии
         ul.home__list
           li.home__item.gradient Реализовал более 90 полномасштабных проектов для городских мероприятий, фестивалей и ярморок
           li.home__item.gradient Со-автор программы на Первом канале «Идеальный Ремонт»
           li.home__item.gradient Основатель 2-ух компаний в сфере ландшафтного дизайна, в штате которых более 500 человек
       .home__section.home__section_2
-        a(href="#").play-button.play-button_style1.shadow.home__play-button
-          i.fas.fa-caret-right
+        .play-button.play-button_style1.home__play-button
+          a(href="https://www.youtube.com/watch?v=BgK_Er7WZVg").shadow.popup-youtube
+            i.fas.fa-caret-right
           span.play-button__text Посмотрите видео<br> и узнайте больше
       .home__section.home__section_3
         .home__button
           .home__button-decoration Получите консультацию<br> от Ильи Васецкого бесплатно
-          a(href="#").button.gradient
+          a(href="#popup1").button.gradient.popup_link
             span Получить консультацию
       .home__section.home__section_4
         .cooperation-link
-            a(href="#").cooperation-link__container.shadow
+            a(href="#popup2").cooperation-link__container.shadow.popup_link
               img(data-src="img/icons/microphone.png", alt="").lazy.cooperation-link__icon
               span.cooperation-link__title Сотрудничество<br> со СМИ

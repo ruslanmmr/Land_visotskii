@@ -14,9 +14,8 @@
       <header class="header">
         <div class="container"> 
           <div class="header__container">
-            <div class="logo">
-              <h1 class="logo__title">Ландшафтный эксперт<br> Илья Васецкий</h1>
-            </div>
+            <div class="logo"><a class="logo__link" href="#">
+                <h1 class="logo__title">Ландшафтный эксперт<br> Илья Васецкий</h1></a></div>
             <div class="header__content">
               <div class="header__mobile-wrap">
                 <div class="socials header__socials">
@@ -28,39 +27,190 @@
                     <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-youtube"></i></a></li>
                   </ul>
                 </div>
-                <div class="contact-number"><a class="contact-number__number" href="tel:84957206203"><i class="fas fa-phone"></i>8 (495) 720-62-03</a><a class="contact-number__link" href="#">Получить консультацию</a></div>
-                <div class="cooperation-link header__cooperation-link"><a class="cooperation-link__container shadow" href="#"><img class="lazy cooperation-link__icon" data-src="img/icons/microphone.png" alt=""><span class="cooperation-link__title">Сотрудничество<br> со СМИ</span></a></div>
+                <div class="contact-number"><a class="contact-number__number" href="tel:84957206203"><i class="fas fa-phone"></i>8 (495) 720-62-03</a><a class="contact-number__link popup_link" href="#popup1">Получить консультацию</a></div>
+                <div class="cooperation-link header__cooperation-link"><a class="cooperation-link__container shadow popup_link" href="#popup2"><img class="lazy cooperation-link__icon" data-src="img/icons/microphone.png" alt=""><span class="cooperation-link__title">Сотрудничество<br> со СМИ</span></a></div>
               </div>
             </div><a class="mobile-button" href="#"><span></span></a>
           </div>
         </div>
       </header>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a class="navigation__link navigation__link_active" href="#home"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#projects"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#publications"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
+        </ul>
+      </nav>
       <main class="main">
-        <div class="home">
+        <section class="home" id="home">
           <div class="container">
             <div class="home__container">
               <div class="home__background lazy" data-src="img/backgrounds/bg-home.jpg"></div>
               <div class="home__section home__section_1">
-                <h2 class="home__title">Илья Васецкий - эксперт<br> с 25-летним опытом<br> в ландшафтной индустрии</h2>
+                <h2 class="title home__title">Илья Васецкий - эксперт<br> с 25-летним опытом<br> в ландшафтной индустрии</h2>
                 <ul class="home__list">
                   <li class="home__item gradient">Реализовал более 90 полномасштабных проектов для городских мероприятий, фестивалей и ярморок</li>
                   <li class="home__item gradient">Со-автор программы на Первом канале «Идеальный Ремонт»</li>
                   <li class="home__item gradient">Основатель 2-ух компаний в сфере ландшафтного дизайна, в штате которых более 500 человек</li>
                 </ul>
               </div>
-              <div class="home__section home__section_2"><a class="play-button play-button_style1 shadow home__play-button" href="#"><i class="fas fa-caret-right"></i><span class="play-button__text">Посмотрите видео<br> и узнайте больше</span></a></div>
+              <div class="home__section home__section_2">
+                <div class="play-button play-button_style1 home__play-button"><a class="shadow popup-youtube" href="https://www.youtube.com/watch?v=BgK_Er7WZVg"><i class="fas fa-caret-right"></i></a><span class="play-button__text">Посмотрите видео<br> и узнайте больше</span></div>
+              </div>
               <div class="home__section home__section_3">
                 <div class="home__button">
-                  <div class="home__button-decoration">Получите консультацию<br> от Ильи Васецкого бесплатно</div><a class="button gradient" href="#"><span>Получить консультацию</span></a>
+                  <div class="home__button-decoration">Получите консультацию<br> от Ильи Васецкого бесплатно</div><a class="button gradient popup_link" href="#popup1"><span>Получить консультацию</span></a>
                 </div>
               </div>
               <div class="home__section home__section_4">
-                <div class="cooperation-link"><a class="cooperation-link__container shadow" href="#"><img class="lazy cooperation-link__icon" data-src="img/icons/microphone.png" alt=""><span class="cooperation-link__title">Сотрудничество<br> со СМИ</span></a></div>
+                <div class="cooperation-link"><a class="cooperation-link__container shadow popup_link" href="#popup2"><img class="lazy cooperation-link__icon" data-src="img/icons/microphone.png" alt=""><span class="cooperation-link__title">Сотрудничество<br> со СМИ</span></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="projects" id="projects">
+          <div class="container container_style2">
+            <div class="projects__container row">
+              <div class="projects__background lazy" data-src="img/backgrounds/bg-projects.jpg"></div>
+              <div class="project-block project-block_title col">
+                <div class="project-block__container">
+                  <div class="project-block__wrap">
+                    <h4 class="title">Проекты и бизнесы</h4>
+                    <div class="project-block__content">
+                      <div class="project-block__text">
+                        <p>Под управлением компаний трудится свыше 500 человек.</p>
+                        <p>Проектируем и озеленяем участки.  Строим, ведем коммуникации. Ухаживаем за растениями.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-block col">
+                <div class="project-block__container shadow">
+                  <div class="project-block__wrap">
+                    <h4 class="project-block__title">ЛИ-ЭР</h4>
+                    <div class="project-block__content">
+                      <div class="project-block__text"> 
+                        <p>Выполняем цикл работ от проектирования садов до ухода за участком.</p>
+                        <p>Студия классического ландшафтного дизайна. Основана в 1995 году. Свыше 20 наград и двух сотен реализованных проектов.</p>
+                      </div>
+                      <div class="play-button play-button_style2 project-block__play-button"><a href="#"><i class="fas fa-caret-right"></i></a><span class="play-button__label">Узнать за 90 сек.</span></div>
+                    </div>
+                  </div><a class="project-block__link" href="li-er.com" target="_blank">li-er.com</a>
+                </div>
+              </div>
+              <div class="project-block col">
+                <div class="project-block__container shadow">
+                  <div class="project-block__wrap">
+                    <h4 class="project-block__title">Ландшафт Бистро</h4>
+                    <div class="project-block__content">
+                      <div class="project-block__text"> 
+                        <p>Студия готовых ландшафтных решений. Создадим на участке сад с коммуникациями за 2 суток. Оперативно украсим городскую площадку к празднику.</p>
+                        <p>Компания основана в 2012 году. В каталоге свыше 60 композиций, разработанных Ильей Васецким. Услуга «Шведский стол»: доставка понравившихся растенийна участок и формирование сада за 2 суток при вас.</p>
+                      </div>
+                    </div>
+                  </div><a class="project-block__link" href="landshaftbistro.ru" target="_blank">landshaftbistro.ru</a>
+                </div>
+              </div>
+              <div class="project-block project-block_type2 col">
+                <div class="project-block__container">
+                  <div class="project-block__wrap">
+                    <h4 class="project-block__title">Университет<br> Ландшафтного<br> Дизайна</h4>
+                    <div class="project-block__content">
+                      <div class="project-block__text"> 
+                        <p>Обучим новичков и профи, как реализоваться, достичь успехов в нише и продолжить самостоятельно расти. Онлайн и офлайн формат.</p>
+                      </div>
+                    </div>
+                  </div><span class="project-block__link">Скоро</span>
+                </div>
+              </div>
+              <div class="project-block project-block_type2 col">
+                <div class="project-block__container">
+                  <div class="project-block__wrap"><img class="project-block__blur lazy" data-src="img/backgrounds/blur.jpg" alt="">
+                    <h4 class="project-block__title project-block__title_type2">Проект в разработке</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="publications" id="publications">
+          <div class="publications__background lazy" data-src="img/backgrounds/bg-publications.jpg"></div>
+          <div class="container container_style2">
+            <div class="publications__container">
+              <div class="publications__content shadow">
+                <h4 class="title">Публикации в СМИ</h4>
+                <div class="publications__slider">
+                          <div class="publications-slide"> <img class="lazy publications-slide__edition" data-src="img/banner/logo1.jpg" alt="">
+                            <h5 class="publications-slide__title">Парковые зоны в ЖК: тонкости работы с живой природой</h5>
+                            <p class="publications-slide__text">«В современном жилом проекте важно не только построить качественные дома и оградить их забором для безопасности жителей: нужно думать и об инфраструктуре и, конечно, о природе.»</p><a class="publications-slide__link" href="#">Читать статью</a>
+                          </div>
+                          <div class="publications-slide"> <img class="lazy publications-slide__edition" data-src="img/banner/logo1.jpg" alt="">
+                            <h5 class="publications-slide__title">Парковые зоны в ЖК: тонкости работы с живой природой</h5>
+                            <p class="publications-slide__text">«В современном жилом проекте важно не только построить качественные дома и оградить их забором для безопасности жителей: нужно думать и об инфраструктуре и, конечно, о природе.»</p><a class="publications-slide__link" href="#">Читать статью</a>
+                          </div>
+                </div>
+                <div class="publications__nav">
+                  <button class="slick-arrow slick-prev publications__prev shadow"></button>
+                  <div class="slide-count publications__slide-count"><span class="slide-count__current">0</span><span class="slide-count__all">0</span></div>
+                  <button class="slick-arrow slick-next publications__next shadow"></button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </main>
+      <div class="popup modal_container mfp-with-anim mfp-hide popup_padding popup-feedback" id="popup1">
+        <div class="popup__container">
+          <button class="popup__close">×</button>
+          <h5 class="popup__title">Оставьте заявку, я отвечу на вопросы</h5>
+          <form class="popup-form" action="">
+            <div class="popup-form__group">
+              <input class="input" type="text" required placeholder="Введите имя">
+            </div>
+            <div class="popup-form__group">
+              <input class="input input_phone" type="text" required placeholder="+7 (000) 000-00-00">
+            </div>
+            <div class="popup-form__group popup-form__group_style2">
+              <button class="button gradient popup-form__button" type="submit"><span>Связаться со мной</span></button>
+            </div>
+            <div class="popup-form__group popup-form__group_style2">
+              <div class="checkbox">
+                <label class="checkbox__label">Вы соглашаетесь с условиями обработки персональных данных<br> (<a href='#'>ознакомиться</a>)
+                  <input class="checkbox__input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="popup modal_container mfp-with-anim mfp-hide popup_padding popup-smi" id="popup2">
+        <div class="popup__container">
+          <button class="popup__close">×</button>
+          <h5 class="popup__title">Илья Васецкий открыт к предложениям и готов сотрудничать со СМИ в любое время</h5>
+          <form class="popup-form" action="">
+            <div class="popup-form__group"><span class="popup-form__hint">Заполните форму ниже,<br> и Илья перезвонит вам в ближайшее время</span></div>
+            <div class="popup-form__group">
+              <input class="input input_phone" type="text" required placeholder="+7 (000) 000-00-00">
+            </div>
+            <div class="popup-form__group popup-form__group_style2">
+              <button class="button gradient popup-form__button" type="submit"><span>Связаться со мной</span></button>
+            </div>
+            <div class="popup-form__group popup-form__group_style2">
+              <div class="checkbox">
+                <label class="checkbox__label">Вы соглашаетесь с условиями обработки персональных данных<br> (<a href='#'>ознакомиться</a>)
+                  <input class="checkbox__input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/libs.min.js">                 </script>

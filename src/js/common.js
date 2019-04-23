@@ -2,6 +2,11 @@ $(document).ready(function () {
   lazy();
   nav();
   modalMagnificBasket();
+  autoBlockHeight();
+  landingScroll();
+  checkboxes();
+  publications();
+  $(".input_phone").mask("+7 (999) 999-99-99");
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
@@ -34,7 +39,16 @@ function cover() {
     }
   });
 }
-
+//checkboxes
+function checkboxes() {
+  $('.checkbox__label').on('click', function() {
+    if ($(this).find('input').is(':checked')) {
+      $(this).addClass('checkbox__label_checked');
+    } else {
+      $(this).removeClass('checkbox__label_checked');
+    }
+  })
+}
 //nav
 function nav() {
   var $navButton = $('.mobile-button'),
@@ -64,16 +78,61 @@ function nav() {
       if(flag) {
         $nav.addClass('header__content_visible').show();
         navState();
+        scrollLock.show($("body"));
         flag = false;
       }
     } else {
       if(!flag) {
         $nav.removeClass('header__content_visible').hide();
         navState();
+        scrollLock.show($("body"));
         flag = true;
       }
     }
   });
+}
+//scroll
+function landingScroll() {
+  var $body = $("body"),
+      $link = $('.navigation__link')
+
+  function scroll() {
+    if($body.hasClass("in-scroll")) {} else {
+      $link.each(function () {
+        var window_top = $(window).scrollTop(),
+            div_1 = $(this).attr('href');
+        if ($(div_1).length > 0) {
+          var div_top = $(div_1).offset().top,
+              blockHeight = $(div_1).height();
+          if (window_top >= div_top && window_top < div_top + blockHeight){
+            $link.removeClass('navigation__link_active');
+            $('a[href="'+div_1+'"]').addClass('navigation__link_active');
+          }
+          else {
+            $('a[href="'+div_1+'"]').removeClass('navigation__link_active');
+          };
+        } 
+      });
+    }
+  }
+
+  scroll();
+  $(window).scroll(function(){
+    scroll();
+  });
+
+  $link.on('click', function (event) {
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    
+    event.preventDefault();
+
+    $('body,html').animate({scrollTop: top}, 400);
+      $body.addClass("in-scroll");
+      setTimeout(function() {
+        $body.removeClass("in-scroll");
+      }, 400)
+  })
 }
 
 //lazy
@@ -85,111 +144,26 @@ function lazy() {
     effectTime: '300'
   });
 }
-
-//tooltips
-function tooltip() {
-  $('.tooltip').tooltipster({
-    theme: 'tooltipster-light',
-    trigger:'custom',
-    animationDuration: 100,
-    trackerInterval: 100,
-    triggerOpen: {
-      click: true,  // For mouse
-      touchstart: true, // For touch device
-      mouseenter: true    // For touch device
-    },
-    triggerClose: {
-      click: true,  // For mouse
-      touchleave: true, // For touch device
-      mouseleave: true // For mouse
-    }
-  });
-}
-function slider() {
-  var slider = $('.slider');
-
-  slider.on('init', function () {
-    $(this).addClass('slider_visible')
-  });
+function publications() {
+  var $slider = $('.publications__slider');
   
-  slider.each(function() {
-    var slideCount = 1,
-        slideCount1200 = 1,
-        slideCount992 = 1,
-        slideCount768 = 1,
-        slideCount576 = 1,
-        slideCount420 = 1,
-        arrows = false,
-        dots = false;
+  $slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    $(this).siblings().find('.slide-count__current').text((currentSlide ? currentSlide : 0) + 1);
+    $(this).siblings().find('.slide-count__all').text(slick.slideCount);
+    console.log(slick.slideCount)
+  });
 
-    if($(this).hasClass('slider_dots')) {
-      dots = true;
-    }
-    if($(this).hasClass('slider_arrows')) {
-      arrows = true;
-    }
-    if($(this).hasClass('recommendations-slider')) {
-      slideCount = 6;
-      slideCount1200 = 5;
-      slideCount992 = 4;
-      slideCount768 = 3;
-      slideCount576 = 2;
-      slideCount420 = 1;
-    }
-    if($(this).hasClass('barbers__slider')) {
-      slideCount = 4;
-      slideCount1200 = 4;
-      slideCount992 = 3;
-      slideCount768 = 2;
-      slideCount576 = 1;
-      slideCount420 = 1;
-    }
-
-    $(this).slick({
-      infinite: true,
-      dots: dots,
-      arrows: arrows,
-      speed: 600,
-      slidesToShow: slideCount,
-      slidesToScroll: slideCount,
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: slideCount1200,
-            slidesToScroll: slideCount1200
-          }
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: slideCount992,
-            slidesToScroll: slideCount992
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: slideCount768,
-            slidesToScroll: slideCount768
-          }
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: slideCount576,
-            slidesToScroll: slideCount576
-          }
-        },
-        {
-          breakpoint: 420,
-          settings: {
-            slidesToShow: slideCount420,
-            slidesToScroll: slideCount420
-          }
-        }
-      ]
-    });
+  $slider.slick({
+    infinite: false,
+    dots: false,
+    arrows: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '.publications__prev',
+    nextArrow: '.publications__next'
+    
   });
 }
 //gallery
@@ -222,7 +196,39 @@ function modalMagnificBasket() {
     removalDelay: 300,
     mainClass: 'mfp-fade'
   });
-  $('.popup-close').click(function() {
+  $('.popup-youtube').magnificPopup({
+    disableOn: 576,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 300,
+    preloader: false,
+    fixedContentPos: true,
+    closeBtnInside: false,
+    showCloseBtn: true
+  });
+  $('.popup__close').click(function() {
     $.magnificPopup.close();
 });
+}
+
+//blocks
+function autoBlockHeight() {
+  resize();
+  $(window).resize(function () {
+    resize();
+  });
+
+  function resize() {
+    var mh = 0,
+    $block = $(".project-block__container");
+
+    $block.css('height', 'auto');
+    $block.each(function () {
+      var h_block = parseInt($(this).height());
+      if(h_block > mh) {
+        mh = h_block;
+      };
+    });
+    $block.height(mh);
+  }
 }
