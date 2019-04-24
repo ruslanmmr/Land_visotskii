@@ -53,12 +53,18 @@ function checkboxes() {
 //nav
 function nav() {
   var $navButton = $('.mobile-button'),
+    $navClose = $('.nav-close')
     $nav = $('.header__content'),
     flag;
 
   $navButton.on('click', function (e) {
     e.preventDefault();
     $nav.toggleClass('header__content_visible');
+    navState();
+  })
+  $navClose.on('click', function (e) {
+    e.preventDefault();
+    $nav.removeClass('header__content_visible');
     navState();
   })
   
