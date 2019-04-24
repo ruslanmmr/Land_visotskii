@@ -61,7 +61,6 @@ a {
   outline: none;
   padding: 0;
   appearance: none;
-  color: #f89241;
   cursor: pointer;
   &:before {
     font-family: 'Font Awesome 5 Free';
@@ -72,9 +71,21 @@ a {
     font-size: 20px;
     font-weight: 900;
   }
-  &:hover {
-    background-color: #ff930c;
+  &_style1 {
+    color: #ff930c;
+    background-color: #fff;
+    &:hover {
+      background-color: #ff930c;
+      color: #fff;
+    }
+  }
+  &_style2 {
+    border: 1px solid #fff;
     color: #fff;
+    &:hover {
+      border-color: #ff930c;
+      background-color: #ff930c;
+    }
   }
 }
 .slick-prev {
@@ -86,6 +97,9 @@ a {
   &:before {
     content: '\f061';
   }
+}
+.slick-custom {
+  display: block !important;
 }
 .slide-count {
   display: flex;
@@ -318,7 +332,6 @@ a {
       font-size: 28px;
     }
     &:hover {
-      opacity: 0.8;
       i {
         transform: scale(1.2);
       }
@@ -340,6 +353,9 @@ a {
     font-size: 14px;
     font-weight: 300;
     white-space: nowrap;
+    &_white {
+      color: #fff;
+    }
   }
   &_style1 {
     width: 180px;
@@ -351,6 +367,9 @@ a {
       background-color: #fff;
       i {
         color: #2e53fe;
+      }
+      &:hover {
+        opacity: 0.8;
       }
     }
     &:before {
@@ -369,9 +388,28 @@ a {
     }
   }
   &_style2 {
+    opacity: 1;
     a {
       background-color: #ff970c;
       margin: 0 auto;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    i {
+      color: #fff;
+    }
+  }
+  &_style3 {
+    a {
+      border: 1px solid #fff;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      opacity: 1;
+      &:hover {
+        background-color: #ff970c;
+      }
     }
     i {
       color: #fff;

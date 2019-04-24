@@ -6,6 +6,7 @@ $(document).ready(function () {
   landingScroll();
   checkboxes();
   publications();
+  presentation();
   $(".input_phone").mask("+7 (999) 999-99-99");
 });
 $(window).resize(function () {
@@ -210,7 +211,6 @@ function modalMagnificBasket() {
     $.magnificPopup.close();
 });
 }
-
 //blocks
 function autoBlockHeight() {
   resize();
@@ -231,4 +231,22 @@ function autoBlockHeight() {
     });
     $block.height(mh);
   }
+}
+
+//presentation
+function presentation() {
+  var $slider = $('.presentation__slider');
+
+  $slider.slick({
+    infinite: true,
+    dots: false,
+    arrows: true,
+    speed: 400,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '.presentation__prev',
+    nextArrow: '.presentation__next'
+    
+  });
 }

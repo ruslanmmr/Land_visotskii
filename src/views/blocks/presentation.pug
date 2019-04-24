@@ -1,6 +1,23 @@
 .presentation(id="presentation")
-  h4.presentation__title Наши проекты
-  .presentation-slider
-    .presentation-slide
-      .presentation-slide__background.lazy(data-src='img/backgrounds/selo.jpg')
-      .presentation-slide__container
+  .container
+    .presentation__container
+      h4.presentation__title Наши проекты
+      button.slick-arrow.slick-arrow_style2.slick-custom.slick-prev.presentation__prev
+      button.slick-arrow.slick-arrow_style2.slick-custom.slick-next.presentation__next
+      .presentation__slider
+        .presentation-slide
+          .presentation-slide__background.lazy(data-src='img/backgrounds/selo.jpg')
+          .presentation-slide__filter
+          .presentation-slide__container
+            .play-button.play-button_style3.presentation-slide__play-button
+              a(href="https://www.youtube.com/watch?v=BgK_Er7WZVg").popup-youtube
+                i.fas.fa-caret-right
+              span.play-button__label.play-button__label_white Узнайте все за 120 сек.
+        .presentation-slide
+          .presentation-slide__background.lazy(data-src='img/backgrounds/bg-publications.jpg')
+          .presentation-slide__filter
+          .presentation-slide__container
+            .play-button.play-button_style3.presentation-slide__play-button
+              a(href="https://www.youtube.com/watch?v=BgK_Er7WZVg").popup-youtube
+                i.fas.fa-caret-right
+              span.play-button__label.play-button__label_white Узнайте все за 120 сек.
