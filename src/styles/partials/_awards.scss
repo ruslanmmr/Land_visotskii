@@ -118,9 +118,14 @@
     text-align: center;
   }
   .awards__container {
-    padding: 50px 0;
+    padding: 50px 0 10px 0;
   }
   .awards__nav {
     justify-content: center;
+  }
+}
+@media all and(max-width: 365px) {
+  .awards .container {
+    padding-right: 20px;
   }
 }

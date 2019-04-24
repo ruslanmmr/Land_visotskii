@@ -6,8 +6,10 @@ $(document).ready(function () {
   landingScroll();
   checkboxes();
   publications();
+  videos();
   presentation();
   awards();
+  custompug();
   $(".input_phone").mask("+7 (999) 999-99-99");
 });
 $(window).resize(function () {
@@ -163,12 +165,10 @@ function publications() {
   $slider.slick({
     infinite: false,
     dots: false,
-    arrows: true,
+    arrows: false,
     speed: 400,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: '.publications__prev',
-    nextArrow: '.publications__next'
+    slidesToScroll: 1
     
   });
 }
@@ -185,13 +185,11 @@ function awards() {
   $slider.slick({
     infinite: false,
     dots: false,
-    arrows: true,
+    arrows: false,
     variableWidth: true,
     speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: '.awards__prev',
-    nextArrow: '.awards__next',
     responsive: [
       {
         breakpoint: 768,
@@ -210,27 +208,6 @@ function awards() {
     ] 
   });
 }
-//gallery
-function gallery() {
-  var row = $('.gallery__row:not(:first-child)'),
-      block = $('.gallery-block'),
-      title = $('.gallery-block_title'),
-      margin;
-
-  if(innerWidth>576) {
-    block.css('margin-top', '0');
-    row.each(function() {
-        margin = -($(this).height() / 2);
-        $(this).css('margin-top', margin);
-    }) 
-  } else {
-    row.css('margin-top', '0');
-    block.each(function() {
-      margin = -($(this).height() / 2);
-      $(this).css('margin-top', margin);
-    })
-  }
-}
 //popup
 function popup() {
   $("[data-fancybox]").fancybox({
@@ -245,6 +222,55 @@ function popup() {
   $().fancybox({
     selector : '.gallery-slider__slide:not(.slick-cloned) a',
     backFocus : false
+  });
+}
+//videos
+function videos() {
+  var $slider = $('.videos__slider'),
+      top = $('.videos-slide__video').height() / 2;
+      
+  $slider.each(function() {
+    $(this).on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      $(this).parents('.slider-section').find('.slide-count__current').text((currentSlide ? currentSlide : 0) + 1);
+      $(this).parents('.slider-section').find('.slide-count__all').text(slick.slideCount);
+      $(this).find('.slick-arrow').css('top', top);
+      lazy();
+    });
+    $(this).slick({
+      infinite: true,
+      dots: false,
+      arrows: true,
+      speed: 400,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            adaptiveHeight: true
+          }
+        }
+      ] 
+    });
+  })
+  $(window).resize(function () {
+    top = $('.videos-slide__video').height() / 2;
+    $slider.find('.slick-arrow').css('top', top);
   });
 }
 //blocks
@@ -268,7 +294,15 @@ function autoBlockHeight() {
     $block.height(mh);
   }
 }
-
+//custom pug
+function custompug() {
+  $('.slick-next').on('click', function() {
+    $(this).parents('.slider-section').find('.slick-slider').slick('slickNext');
+  })
+  $('.slick-prev').on('click', function() {
+    $(this).parents('.slider-section').find('.slick-slider').slick('slickPrev');
+  })
+}
 //presentation
 function presentation() {
   var $slider = $('.presentation__slider');
@@ -276,13 +310,11 @@ function presentation() {
   $slider.slick({
     infinite: true,
     dots: false,
-    arrows: true,
+    arrows: false,
     speed: 400,
     fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: '.presentation__prev',
-    nextArrow: '.presentation__next',
     responsive: [
       {
         breakpoint: 576,
