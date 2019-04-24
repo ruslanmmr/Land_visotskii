@@ -10,6 +10,7 @@
     margin: 0;
     padding: 10px 50px;
     transform: translateX(-50%);
+    white-space: nowrap;
   }
   &__container {
     position: relative;
@@ -40,6 +41,7 @@
 .presentation-slide {
   height: 860px;
   position: relative;
+  padding: 90px 0;
   &__filter {
     position: absolute;
     width: 100vw;
@@ -79,5 +81,100 @@
     top: 50%;
     padding-top: 26px;
     transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  &__info {
+    position: absolute;
+    bottom: 0;
+    max-width: 50%;
+    left: 0;
+    color: #fff;
+  }
+  &__title {
+    font-weight: 700;
+  }
+  &__list {
+    margin: 0 0 1em 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    font-size: 22px;
+    font-weight: 700;
+    &:not(:last-child) {
+      &:after {
+        content: '•';
+        padding: 0 5px;
+      }
+    }
+  }
+  &__link {
+    color: #fff;
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+}
+
+@media all and(max-width: 992px) {
+  .presentation-slide__info {
+    max-width: 100%;
+  }
+}
+@media all and(max-width: 576px) {
+  .presentation-slide__info {
+    text-align: center;
+    position: relative;
+    padding-top: 430px;
+  }
+  .presentation .container {
+    padding: 0;
+  }
+  .presentation__slider .slick-list {
+    overflow: hidden;
+  }
+  .presentation-slide__list {
+    justify-content: center;
+  }
+  .presentation-slide__item {
+    font-size: 18px;
+  }
+  .presentation-slide {
+    padding: 60px 0;
+  }
+  .presentation__title {
+    top: 60px;
+  }
+  .presentation-slide {
+    height: auto;
+  }
+  .presentation-slide__play-button {
+    padding: 0;
+    top: 170px;
+    transform: translate(-50%, 0);
+  }
+  .presentation__next,
+  .presentation__prev {
+    top: 260px;
+    transform: translate(0);
+  }
+  .presentation__next {
+    right: 30px;
+  }
+  .presentation__prev {
+    left: 30px;
+  }
+  .presentation-slide__container {
+    padding: 0 30px;
+  }
+}
+@media all and(max-width: 365px) {
+  .presentation__prev {
+    left: 20px;
+  }
+  .presentation__next {
+    right: 20px;
   }
 }

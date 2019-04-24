@@ -4,20 +4,38 @@
       h4.presentation__title Наши проекты
       button.slick-arrow.slick-arrow_style2.slick-custom.slick-prev.presentation__prev
       button.slick-arrow.slick-arrow_style2.slick-custom.slick-next.presentation__next
-      .presentation__slider
+      .presentation__slider.slider
         .presentation-slide
           .presentation-slide__background.lazy(data-src='img/backgrounds/selo.jpg')
           .presentation-slide__filter
           .presentation-slide__container
             .play-button.play-button_style3.presentation-slide__play-button
-              a(href="https://www.youtube.com/watch?v=BgK_Er7WZVg").popup-youtube
+              a(data-fancybox href="https://www.youtube.com/watch?v=BgK_Er7WZVg")
                 i.fas.fa-caret-right
               span.play-button__label.play-button__label_white Узнайте все за 120 сек.
+            .presentation-slide__info
+              h5.title.presentation-slide__title Поселок Сосны
+              ul.presentation-slide__list
+                li.presentation-slide__item 28 соток
+                li.presentation-slide__item 5 месяцев работ
+                li.presentation-slide__item ЛИ-ЭР
+              p.presentation-slide__text Удачный прием совмещения природного и искусственного ландшафта — дачный участок 30 соток в Соснах. Проект европейского сада с живописными террасами и водоемом.
+              .presentation-slide__gallery
+                a(data-fancybox="presentation-images" href="img/backgrounds/selo.jpg").presentation-slide__link Посмотреть фото
         .presentation-slide
           .presentation-slide__background.lazy(data-src='img/backgrounds/bg-publications.jpg')
           .presentation-slide__filter
           .presentation-slide__container
             .play-button.play-button_style3.presentation-slide__play-button
-              a(href="https://www.youtube.com/watch?v=BgK_Er7WZVg").popup-youtube
+              a(data-fancybox href="https://www.youtube.com/watch?v=BgK_Er7WZVg")
                 i.fas.fa-caret-right
               span.play-button__label.play-button__label_white Узнайте все за 120 сек.
+            .presentation-slide__info
+              h5.title.presentation-slide__title Поселок Другой
+              ul.presentation-slide__list
+                li.presentation-slide__item 2800 соток
+                li.presentation-slide__item 50 месяцев работ 
+                li.presentation-slide__item ЛИ-ЭР
+              p.presentation-slide__text Удачный прием совмещения природного и искусственного ландшафта — дачный участок 30 соток в Соснах. Проект европейского сада с живописными террасами и водоемом.
+              .presentation-slide__gallery
+                a(data-fancybox="presentation-images" href="img/backgrounds/bg-publications.jpg").gallery.presentation-slide__link Посмотреть фото

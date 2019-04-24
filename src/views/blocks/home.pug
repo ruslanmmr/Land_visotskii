@@ -10,16 +10,16 @@ section.home(id="home")
           li.home__item.gradient Основатель 2-ух компаний в сфере ландшафтного дизайна, в штате которых более 500 человек
       .home__section.home__section_2
         .play-button.play-button_style1.home__play-button
-          a(href="https://www.youtube.com/watch?v=BgK_Er7WZVg").shadow.popup-youtube
+          a(data-fancybox href="https://www.youtube.com/watch?v=BgK_Er7WZVg").shadow
             i.fas.fa-caret-right
           span.play-button__text Посмотрите видео<br> и узнайте больше
       .home__section.home__section_3
         .home__button
           .home__button-decoration Получите консультацию<br> от Ильи Васецкого бесплатно
-          a(href="#popup1").button.gradient.popup_link
+          a(href="javascript:;" data-fancybox='modal' data-src="#popup1").button.gradient.popup_link
             span Получить консультацию
       .home__section.home__section_4
         .cooperation-link
-            a(href="#popup2").cooperation-link__container.shadow.popup_link
+            a(href="javascript:;" data-fancybox='modal' data-src="#popup2").cooperation-link__container.shadow.popup_link
               img(data-src="img/icons/microphone.png", alt="").lazy.cooperation-link__icon
               span.cooperation-link__title Сотрудничество<br> со СМИ

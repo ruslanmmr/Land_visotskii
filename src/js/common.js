@@ -1,7 +1,7 @@
 $(document).ready(function () {
   lazy();
   nav();
-  modalMagnificBasket();
+  popup();
   autoBlockHeight();
   landingScroll();
   checkboxes();
@@ -189,27 +189,16 @@ function gallery() {
   }
 }
 //popup
-function modalMagnificBasket() {
-  $('.popup_link').magnificPopup({
-    closeBtnInside: false,
-    showCloseBtn: false,
-    fixedContentPos: true,
-    removalDelay: 300,
-    mainClass: 'mfp-fade'
+function popup() {
+  $("[data-fancybox]").fancybox({
+    loop: true
   });
-  $('.popup-youtube').magnificPopup({
-    disableOn: 576,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 300,
-    preloader: false,
-    fixedContentPos: true,
-    closeBtnInside: false,
-    showCloseBtn: true
+  $("[data-fancybox='modal']").fancybox({
+    autoFocus: false,
+    smallBtn: true,
+    touch: false,
+    arrows: false
   });
-  $('.popup__close').click(function() {
-    $.magnificPopup.close();
-});
 }
 //blocks
 function autoBlockHeight() {
@@ -246,7 +235,14 @@ function presentation() {
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: '.presentation__prev',
-    nextArrow: '.presentation__next'
-    
+    nextArrow: '.presentation__next',
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          adaptiveHeight: true
+        }
+      }
+    ]
   });
 }
