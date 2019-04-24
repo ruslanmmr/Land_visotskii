@@ -1,0 +1,36 @@
+.presentation {
+  position: relative;
+  &__title {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    left: 50%;
+    top: 90px;
+    font-size: 24px;
+    margin: 0;
+    padding: 10px 50px;
+    transform: translateX(-50%);
+  }
+}
+.presentation-slider {
+  position: relative;
+  z-index: 1;
+}
+.presentation-slide {
+  height: 860px;
+  position: relative;
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  &__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}

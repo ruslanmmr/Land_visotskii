@@ -7,15 +7,16 @@ mixin slide()
 .publications(id="publications")
   .publications__background.lazy(data-src='img/backgrounds/bg-publications.jpg')
   .container.container_style2
-    .publications__container
-      .publications__content.shadow
-        h4.title Публикации в СМИ
-        .publications__slider
-          +slide
-          +slide
-        .publications__nav
-          button.slick-arrow.slick-prev.publications__prev.shadow
-          .slide-count.publications__slide-count
-            span.slide-count__current 0
-            span.slide-count__all 0
-          button.slick-arrow.slick-next.publications__next.shadow
+    .publications__container.row
+      .publications__wrap.col
+        .publications__content.shadow
+          h4.title Публикации в СМИ
+          .publications__slider
+            +slide
+            +slide
+          .publications__nav
+            button.slick-arrow.slick-prev.publications__prev.shadow
+            .slide-count.publications__slide-count
+              span.slide-count__current 0
+              span.slide-count__all 0
+            button.slick-arrow.slick-next.publications__next.shadow

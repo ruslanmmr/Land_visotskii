@@ -9,11 +9,13 @@
     height: 100%;
     background-size: cover;
   }
+  &__wrap {
+    width: 50%;
+    margin: 0 0 0 auto;
+  }
   &__content {
     padding: 60px 120px;
     background-color: #fff;
-    margin: 0 0 0 auto;
-    max-width: 690px;
   }
   &__slider {
     margin: 0 -15px;
@@ -45,10 +47,22 @@
 
   }
 }
-
+@media all and(max-width: 1450px) {
+  .publications__content {
+    padding: 60px 80px;
+  }
+}
+@media all and(max-width: 1200px) {
+  .publications__wrap {
+    width: 75%;
+  }
+}
 @media all and(max-width: 768px) {
   .publications__content {
     padding: 60px;
+  }
+  .publications__wrap {
+    width: 100%;
   }
 }
 @media all and(max-width: 576px) {

@@ -39,8 +39,8 @@
           <li class="navigation__item"><a class="navigation__link navigation__link_active" href="#home"></a></li>
           <li class="navigation__item"><a class="navigation__link" href="#projects"></a></li>
           <li class="navigation__item"><a class="navigation__link" href="#publications"></a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#about"></a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#presentation"></a></li>
           <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
           <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
           <li class="navigation__item"><a class="navigation__link" href="#s"></a></li>
@@ -99,7 +99,7 @@
                         <p>Выполняем цикл работ от проектирования садов до ухода за участком.</p>
                         <p>Студия классического ландшафтного дизайна. Основана в 1995 году. Свыше 20 наград и двух сотен реализованных проектов.</p>
                       </div>
-                      <div class="play-button play-button_style2 project-block__play-button"><a href="#"><i class="fas fa-caret-right"></i></a><span class="play-button__label">Узнать за 90 сек.</span></div>
+                      <div class="play-button play-button_style2 project-block__play-button"><a class="popup-youtube" href="https://www.youtube.com/watch?v=BgK_Er7WZVg"><i class="fas fa-caret-right"></i></a><span class="play-button__label">Узнать за 90 сек.</span></div>
                     </div>
                   </div><a class="project-block__link" href="li-er.com" target="_blank">li-er.com</a>
                 </div>
@@ -142,25 +142,78 @@
         <div class="publications" id="publications">
           <div class="publications__background lazy" data-src="img/backgrounds/bg-publications.jpg"></div>
           <div class="container container_style2">
-            <div class="publications__container">
-              <div class="publications__content shadow">
-                <h4 class="title">Публикации в СМИ</h4>
-                <div class="publications__slider">
-                          <div class="publications-slide"> <img class="lazy publications-slide__edition" data-src="img/banner/logo1.jpg" alt="">
-                            <h5 class="publications-slide__title">Парковые зоны в ЖК: тонкости работы с живой природой</h5>
-                            <p class="publications-slide__text">«В современном жилом проекте важно не только построить качественные дома и оградить их забором для безопасности жителей: нужно думать и об инфраструктуре и, конечно, о природе.»</p><a class="publications-slide__link" href="#">Читать статью</a>
-                          </div>
-                          <div class="publications-slide"> <img class="lazy publications-slide__edition" data-src="img/banner/logo1.jpg" alt="">
-                            <h5 class="publications-slide__title">Парковые зоны в ЖК: тонкости работы с живой природой</h5>
-                            <p class="publications-slide__text">«В современном жилом проекте важно не только построить качественные дома и оградить их забором для безопасности жителей: нужно думать и об инфраструктуре и, конечно, о природе.»</p><a class="publications-slide__link" href="#">Читать статью</a>
-                          </div>
-                </div>
-                <div class="publications__nav">
-                  <button class="slick-arrow slick-prev publications__prev shadow"></button>
-                  <div class="slide-count publications__slide-count"><span class="slide-count__current">0</span><span class="slide-count__all">0</span></div>
-                  <button class="slick-arrow slick-next publications__next shadow"></button>
+            <div class="publications__container row">
+              <div class="publications__wrap col">
+                <div class="publications__content shadow">
+                  <h4 class="title">Публикации в СМИ</h4>
+                  <div class="publications__slider">
+                            <div class="publications-slide"> <img class="lazy publications-slide__edition" data-src="img/banner/logo1.jpg" alt="">
+                              <h5 class="publications-slide__title">Парковые зоны в ЖК: тонкости работы с живой природой</h5>
+                              <p class="publications-slide__text">«В современном жилом проекте важно не только построить качественные дома и оградить их забором для безопасности жителей: нужно думать и об инфраструктуре и, конечно, о природе.»</p><a class="publications-slide__link" href="#">Читать статью</a>
+                            </div>
+                            <div class="publications-slide"> <img class="lazy publications-slide__edition" data-src="img/banner/logo1.jpg" alt="">
+                              <h5 class="publications-slide__title">Парковые зоны в ЖК: тонкости работы с живой природой</h5>
+                              <p class="publications-slide__text">«В современном жилом проекте важно не только построить качественные дома и оградить их забором для безопасности жителей: нужно думать и об инфраструктуре и, конечно, о природе.»</p><a class="publications-slide__link" href="#">Читать статью</a>
+                            </div>
+                  </div>
+                  <div class="publications__nav">
+                    <button class="slick-arrow slick-prev publications__prev shadow"></button>
+                    <div class="slide-count publications__slide-count"><span class="slide-count__current">0</span><span class="slide-count__all">0</span></div>
+                    <button class="slick-arrow slick-next publications__next shadow"></button>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="about" id="about">
+          <div class="container container_style2">
+            <div class="about__wrap">
+              <div class="about__background lazy" data-src="img/backgrounds/bg-projects.jpg"></div>
+              <div class="about__container row">
+                <div class="about__text col">
+                  <h5 class="title about__title">Более 25 лет я совершенствую<br><span>свои знания и навыки для того,<br> чтобы помогать вам реализовывать мечты </span></h5>
+                  <p>В 1995 году я основал первую компанию, в которой на сегодняшний день насчитывается более 500 специалистов.</p>
+                  <p>В 2012 году я вывел на рынок продукт, которому до сих пор нет аналогов на рынке ландшафтного дизайна и архитектуры.</p>
+                  <p>Моя задача — помочь воплотить все пожелания в жизнь и сделать так, чтобы у вашего сада или парка появилась своя История. </p>
+                  <p>Ведь ландшафтный дизайн и архитектура — это не просто мое призвание, это целая философия. </p>
+                </div>
+                <div class="about__image col"><img class="lazy" data-src="img/backgrounds/photo.png" alt=""></div>
+                <div class="about__more col"><a class="button gradient popup_link" href="#popup1"><span>Связаться со мной</span></a></div>
+                <div class="about-blocks col">
+                  <div class="about-blocks__container row">
+                    <div class="about-block col">
+                      <div class="about-block__container">
+                        <div class="about-block__text"><span>1750 </span>объектов реализовал</div>
+                      </div>
+                    </div>
+                    <div class="about-block col">
+                      <div class="about-block__container">
+                        <div class="about-block__text"><span>38 </span>масштабных городских фестивалей организовал в Москве</div>
+                      </div>
+                    </div>
+                    <div class="about-block col">
+                      <div class="about-block__container">
+                        <div class="about-block__text"><span>119 </span>объектов ухода</div>
+                      </div>
+                    </div>
+                    <div class="about-block col">
+                      <div class="about-block__container">
+                        <div class="about-block__text"><span>6000+ </span>проектных решений разработал</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="presentation" id="presentation">
+          <h4 class="presentation__title">Наши проекты</h4>
+          <div class="presentation-slider">
+            <div class="presentation-slide">
+              <div class="presentation-slide__background lazy" data-src="img/backgrounds/selo.jpg"></div>
+              <div class="presentation-slide__container"></div>
             </div>
           </div>
         </div>
