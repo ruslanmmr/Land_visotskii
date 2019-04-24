@@ -7,6 +7,7 @@ $(document).ready(function () {
   checkboxes();
   publications();
   presentation();
+  awards();
   $(".input_phone").mask("+7 (999) 999-99-99");
 });
 $(window).resize(function () {
@@ -155,9 +156,8 @@ function publications() {
   
   $slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-    $(this).siblings().find('.slide-count__current').text((currentSlide ? currentSlide : 0) + 1);
-    $(this).siblings().find('.slide-count__all').text(slick.slideCount);
-    console.log(slick.slideCount)
+    $(this).parents('.slider-section').find('.slide-count__current').text((currentSlide ? currentSlide : 0) + 1);
+    $(this).parents('.slider-section').find('.slide-count__all').text(slick.slideCount);
   });
 
   $slider.slick({
@@ -170,6 +170,44 @@ function publications() {
     prevArrow: '.publications__prev',
     nextArrow: '.publications__next'
     
+  });
+}
+//awards
+function awards() {
+  var $slider = $('.awards__slider');
+  
+  $slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    $(this).parents('.slider-section').find('.slide-count__current').text((currentSlide ? currentSlide : 0) + 1);
+    $(this).parents('.slider-section').find('.slide-count__all').text(slick.slideCount);
+  });
+
+  $slider.slick({
+    infinite: false,
+    dots: false,
+    arrows: true,
+    variableWidth: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '.awards__prev',
+    nextArrow: '.awards__next',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1
+        }
+      }
+    ] 
   });
 }
 //gallery
@@ -203,6 +241,10 @@ function popup() {
     smallBtn: true,
     touch: false,
     arrows: false
+  });
+  $().fancybox({
+    selector : '.gallery-slider__slide:not(.slick-cloned) a',
+    backFocus : false
   });
 }
 //blocks

@@ -1,0 +1,126 @@
+.awards {
+  &__container {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    padding-right: 0;
+  }
+  &__title {
+    width: 360px;
+    flex-shrink: 0;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__content {
+    width: calc(100% - 360px);
+  }
+  &__slider {
+    margin: 0;
+    overflow: hidden;
+    .slick-list {
+      margin: 0 -15px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.awards-slide {
+  padding: 0 15px;
+  max-width: 360px;
+  &__title {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+      opacity: 0;
+    }
+    &:after {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f00e";
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      color: #ff970c;
+      font-size: 30px;
+      box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.2);
+      background-color: #fff;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.3s;
+    }
+    &:hover {
+      &:after,
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media all and(max-width: 768px) {
+  .awards__container {
+    flex-wrap: wrap;
+  }
+  .awards-slide {
+    max-width: 100%;
+  }
+  .awards__title {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 25px;
+  }
+  .awards__content {
+    width: 100%;
+  }
+  .awards__slider .slick-list {
+    padding-right: 0;
+  }
+  .awards .container {
+    padding-right: 30px;
+  }
+}
+@media all and(max-width: 576px) {
+  .awards__title {
+    text-align: center;
+  }
+  .awards__container {
+    padding: 50px 0;
+  }
+  .awards__nav {
+    justify-content: center;
+  }
+}

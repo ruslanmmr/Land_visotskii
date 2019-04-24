@@ -23,7 +23,7 @@ a {
   }
 }
 .container {
-  max-width: 1450px;
+  max-width: 1470px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -477,3 +477,4 @@ a {
 @import "./partials/about";
 @import "./partials/publications";
 @import "./partials/presentation";
+@import "./partials/awards";
