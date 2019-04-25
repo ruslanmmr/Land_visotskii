@@ -10,6 +10,8 @@ $(document).ready(function () {
   presentation();
   awards();
   custompug();
+  clients();
+  cover();
   $(".input_phone").mask("+7 (999) 999-99-99");
 });
 $(window).resize(function () {
@@ -320,6 +322,42 @@ function presentation() {
         breakpoint: 576,
         settings: {
           adaptiveHeight: true
+        }
+      }
+    ]
+  });
+}
+//clients
+function clients() {
+  var $slider = $('.clients__slider');
+
+  $slider.slick({
+    infinite: false,
+    dots: false,
+    arrows: false,
+    speed: 400,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
       }
     ]

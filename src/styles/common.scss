@@ -448,8 +448,23 @@ a {
     }
   }
 }
-.mfp-bg {
-  background: rgba(0, 0, 0, 0.8);
+.cover-box {
+  position: relative;
+  img {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.wh {
+  height: auto;
+  width: 100%;
+}
+.ww {
+  height: 100%;
+  width: auto;
 }
 
 @media all and(max-width: 1450px) {
@@ -505,3 +520,4 @@ a {
 @import "./partials/presentation";
 @import "./partials/awards";
 @import "./partials/videos";
+@import "./partials/clients";
