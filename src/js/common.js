@@ -170,14 +170,22 @@ function publications() {
     arrows: false,
     speed: 400,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          adaptiveHeight: true
+        }
+      }
+    ]
     
   });
 }
 //awards
 function awards() {
   var $slider = $('.awards__slider');
-  
+
   $slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
     $(this).parents('.slider-section').find('.slide-count__current').text((currentSlide ? currentSlide : 0) + 1);
@@ -213,16 +221,13 @@ function awards() {
 //popup
 function popup() {
   $("[data-fancybox]").fancybox({
-    loop: true
+    loop: true,
+    backFocus : false
   });
   $(".modal").fancybox({
     autoFocus: false,
     smallBtn: true,
     touch: false
-  });
-  $("").fancybox({
-    selector : '.slick-slide:not(.slick-cloned) a',
-    backFocus : false
   });
 }
 //videos

@@ -1,9 +1,3 @@
-mixin slide()
-  .publications-slide 
-    img(data-src="img/banner/logo1.jpg", alt="").lazy.publications-slide__edition
-    h5.publications-slide__title Парковые зоны в ЖК: тонкости работы с живой природой
-    p.publications-slide__text «В современном жилом проекте важно не только построить качественные дома и оградить их забором для безопасности жителей: нужно думать и об инфраструктуре и, конечно, о природе.»
-    a(href="#").publications-slide__link Читать статью
 .publications(id="publications").slider-section
   .publications__background.lazy(data-src='img/backgrounds/bg-publications.jpg')
   .container.container_style2
@@ -12,8 +6,36 @@ mixin slide()
         .publications__content.shadow
           h4.title Публикации в СМИ
           .publications__slider
-            +slide
-            +slide
+            .publications-slide 
+              img(data-src="img/banner/logo2.jpg", alt="").lazy.publications-slide__edition
+              h5.publications-slide__title Ландшафтный Архитектор Москвы Илья Васецкий
+              p.publications-slide__text Посмеивались, когда я разбил на участке цветник – всего-то четыре на три с половиной метра. А старая тетина дача преобразилась, зазвучала по-другому! Тогда пришло понимание – земля дана нам не только для потребления, красота ей нужна, как она нужна человеческому глазу, сердцу…
+              a(target='_blank' href="https://www.metronews.ru/partners/novosti-partnerov-97/reviews/landshaftnyy-arhitektor-moskvy-ilya-vaseckiy-1319901/").publications-slide__link Читать статью
+            .publications-slide 
+              img(data-src="img/banner/logo1.jpg", alt="").lazy.publications-slide__edition
+              h5.publications-slide__title Парковые зоны в ЖК: тонкости работы с живой природой
+              p.publications-slide__text Художественный руководитель компании "ЛиЭр-VIP ландшафты" Илья Васецкий и руководитель социальных и коммерческих проектов жилого комплекса "Андерсен", к.э.н. Елена Соболева рассказывают о том, как им удалось реализовать проект комплексного благоустройства зеленых территорий в ЖК "Андерсен", расположенном в Новой Москве.
+              a(target='_blank' href="http://gardener.ru/events/interview/page6018.php").publications-slide__link Читать статью
+            .publications-slide 
+              img(data-src="img/banner/logo3.jpg", alt="").lazy.publications-slide__edition
+              h5.publications-slide__title Москва. Состоялась презентация международного мультимедийного проекта The World
+              p.publications-slide__text Цветочное оформление пространства «Магадана» создали Event Design studio Екатерины Лошкаревой и ландшафтная компания ЛИ-ЭР Ильи Васецкого.
+              a(target='_blank' href="http://iskusstvo.pro/2017/06/01/moskva-sostoyalas-prezentaciya-mezhdunarodnogo-multimedijnogo-proekta-the-world.html").publications-slide__link Читать статью
+            .publications-slide 
+              img(data-src="img/banner/logo1.jpg", alt="").lazy.publications-slide__edition
+              h5.publications-slide__title Конкурс осуществленных и нереализованных проектов "Ландшафтная архитектура. Взгляд из дома - 2008"
+              p.publications-slide__text 26 октября 2008 года в Доме на Брестской состоялась церемония награждения победителей выставки-конкурса осуществленных и нереализованных проектов "Ландшафтная архитектура. Взгляд из дома 2008". В этом году конкурс представлял проекты по семи номинациям
+              a(target='_blank' href="http://gardener.ru/events/exhibition/page146.php").publications-slide__link Читать статью
+            .publications-slide 
+              img(data-src="img/banner/logo4.jpg", alt="").lazy.publications-slide__edition
+              h5.publications-slide__title Секреты идеального газона
+              p.publications-slide__text Красивый, густой и ухоженный газон - мечта всех владельцев приусадебных участков. Это как визитная карточка хозяев, отражающая их вкус и статус. Образцовый газон создать и поддерживать совсем не просто, но он того несомненно стоит. Как правильно организовать изумрудную лужайку и как за ней ухаживать. Советы от авторитетного ландшафтного архитектора, Ильи Васецкого.
+              a(target='_blank' href="http://iremont.tv/ideas/23545/?sphrase_id=34674").publications-slide__link Читать статью
+            .publications-slide 
+              img(data-src="img/banner/logo4.jpg", alt="").lazy.publications-slide__edition
+              h5.publications-slide__title Шесть соток смелого эксперимента
+              p.publications-slide__text Цель основной аудитории дачников, чтобы красота гармонично соседствовала с практичностью, чтобы сад был на загляденье, приносил истинное эстетическое удовольствие и при этом был богат не только декоративными растениями, а еще и плодовыми. Как же преобразить 6 соток в уютный для всех членов семьи клочок радости и комфорта?
+              a(target='_blank' href="http://iremont.tv/ideas/23347/?sphrase_id=34674").publications-slide__link Читать статью
           .publications__nav
             button.slick-arrow.slick-arrow_style1.slick-custom.slick-prev.publications__prev.shadow
             .slide-count.publications__slide-count
