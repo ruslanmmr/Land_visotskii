@@ -1,9 +1,8 @@
 $(document).ready(function () {
   lazy();
-  nav();
+  landingScroll();
   popup();
   autoBlockHeight();
-  landingScroll();
   checkboxes();
   publications();
   videos();
@@ -12,6 +11,7 @@ $(document).ready(function () {
   custompug();
   clients();
   cover();
+  nav();
   $(".input_phone").mask("+7 (999) 999-99-99");
 });
 $(window).resize(function () {
@@ -145,7 +145,6 @@ function landingScroll() {
       }, 400)
   })
 }
-
 //lazy
 function lazy() {
   $(".lazy").Lazy({
