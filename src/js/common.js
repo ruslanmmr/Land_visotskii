@@ -19,15 +19,7 @@ $(window).resize(function () {
 });
 
 //global variables
-var innerWidth = $('body').innerWidth(),
-    //scroll-styling
-    cursorcolorVar = "#fff",
-    cursorwidthVar = "7px",
-    cursorborderVar = "0",
-    cursorborderradiusVar = "0",
-    zindexVar = [100],
-    bouncescrollVar = false;
-    //
+var innerWidth = $('body').innerWidth();
 
 //image-cover-box
 function cover() {
@@ -224,14 +216,14 @@ function awards() {
 function popup() {
   $("[data-fancybox]").fancybox({
     loop: true,
-    backFocus : false,
-    fixed : false
+    backFocus : false
   });
   $(".modal").fancybox({
     autoFocus: false,
     smallBtn: true,
     touch: false
   });
+  $('body').removeClass('compensate-for-scrollbar');
 }
 //videos
 function videos() {
