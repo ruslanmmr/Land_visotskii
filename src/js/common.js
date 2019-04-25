@@ -215,11 +215,10 @@ function popup() {
   $("[data-fancybox]").fancybox({
     loop: true
   });
-  $("[data-fancybox='modal']").fancybox({
+  $(".modal").fancybox({
     autoFocus: false,
     smallBtn: true,
-    touch: false,
-    arrows: false
+    touch: false
   });
   $().fancybox({
     selector : '.gallery-slider__slide:not(.slick-cloned) a',

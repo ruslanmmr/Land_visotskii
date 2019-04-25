@@ -33,6 +33,9 @@ a {
   position: relative;
   z-index: 2;
   padding: 0 30px;
+  &_small {
+    max-width: 1230px;
+  }
 }
 .col {
   padding: 15px;
@@ -521,3 +524,5 @@ a {
 @import "./partials/awards";
 @import "./partials/videos";
 @import "./partials/clients";
+@import "./partials/questions";
+@import "./partials/footer";
