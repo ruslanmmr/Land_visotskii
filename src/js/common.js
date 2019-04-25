@@ -149,8 +149,8 @@ function landingScroll() {
 //lazy
 function lazy() {
   $(".lazy").Lazy({
-    visibleOnly: false,
-    threshold: '500',
+    visibleOnly: true,
+    //threshold: '500',
     effect: 'fadeIn',
     effectTime: '300'
   });
@@ -162,6 +162,7 @@ function publications() {
     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
     $(this).parents('.slider-section').find('.slide-count__current').text((currentSlide ? currentSlide : 0) + 1);
     $(this).parents('.slider-section').find('.slide-count__all').text(slick.slideCount);
+    lazy();
   });
 
   $slider.slick({
@@ -190,6 +191,7 @@ function awards() {
     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
     $(this).parents('.slider-section').find('.slide-count__current').text((currentSlide ? currentSlide : 0) + 1);
     $(this).parents('.slider-section').find('.slide-count__all').text(slick.slideCount);
+    lazy();
   });
 
   $slider.slick({
@@ -334,6 +336,10 @@ function presentation() {
 //clients
 function clients() {
   var $slider = $('.clients__slider');
+
+  $slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+    lazy();
+  })
 
   $slider.slick({
     infinite: false,
