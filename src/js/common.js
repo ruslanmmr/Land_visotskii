@@ -220,8 +220,8 @@ function popup() {
     smallBtn: true,
     touch: false
   });
-  $().fancybox({
-    selector : '.gallery-slider__slide:not(.slick-cloned) a',
+  $("").fancybox({
+    selector : '.slick-slide:not(.slick-cloned) a',
     backFocus : false
   });
 }
