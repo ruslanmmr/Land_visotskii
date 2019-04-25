@@ -77,6 +77,7 @@ function nav() {
       scrollLock.hide($("body"));
       $navButton.addClass('mobile-button_active');
       $nav.fadeIn(300);
+      lazy();
     } else {
       scrollLock.show($("body"));
       $navButton.removeClass('mobile-button_active');
@@ -134,7 +135,7 @@ function landingScroll() {
 
   $link.on('click', function (event) {
     var id  = $(this).attr('href'),
-        top = $(id).offset().top;
+        top = $(id).offset().top + 2;
     
     event.preventDefault();
 
@@ -223,7 +224,8 @@ function awards() {
 function popup() {
   $("[data-fancybox]").fancybox({
     loop: true,
-    backFocus : false
+    backFocus : false,
+    fixed : false
   });
   $(".modal").fancybox({
     autoFocus: false,
