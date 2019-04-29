@@ -43,9 +43,23 @@ a {
 .row {
   margin: 0 -15px 0 -15px;
 }
+.test {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('../img/test.jpg') no-repeat center top;
+  background-size: 1410px auto;
+  z-index: 1;
+  opacity: 0.5;
+  //display: none;
+}
 .wrapper {
   overflow: hidden;
   position: relative;
+  z-index: 2;
+  opacity: 0.5;
   min-height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
@@ -366,7 +380,7 @@ a {
     font-weight: 500;
     left: calc(50% + 30px);
     white-space: nowrap;
-    top: 0;
+    top: 20px;
     transform: translateY(-100%);
   }
   &__label {
