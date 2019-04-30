@@ -173,9 +173,14 @@
   }
 }
 
+@media all and(max-width: 1200px) {
+  .header__socials {
+    padding-right: 30px;
+  }
+}
 @media all and(max-width: 992px) {
   .header__socials {
-    flex-direction: column;
+    display: none;
   }
 }
 @media all and(max-width: 768px) {
