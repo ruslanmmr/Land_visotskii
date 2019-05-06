@@ -144,7 +144,10 @@ function lazy() {
     visibleOnly: true,
     //threshold: '500',
     effect: 'fadeIn',
-    effectTime: '300'
+    effectTime: '300',
+    afterLoad: function() {
+      cover();
+    }
   });
 }
 function publications() {
