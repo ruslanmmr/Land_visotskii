@@ -226,18 +226,20 @@ a {
   appearance: none;
   cursor: pointer;
   outline: none;
-  -webkit-backface-visibility: hidden;
   overflow: hidden;
   &:before,
   &:after {
     content: '';
     display: block;
+    border-radius: 100px;
+    overflow: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     transition: 0.3s;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
   }
   &:hover {
     &:before {
