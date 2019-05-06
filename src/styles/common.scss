@@ -226,6 +226,7 @@ a {
   appearance: none;
   cursor: pointer;
   outline: none;
+  -webkit-backface-visibility: hidden;
   overflow: hidden;
   &:before,
   &:after {
